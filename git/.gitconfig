@@ -1,0 +1,20 @@
+[user]
+	name = yangshuo
+	mail = yangshuosdu@gmail.com
+	email = yangshuosdu@gmail.com
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+[diff]
+	tool = kdiff3
+[difftool "kdiff3"]
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+[core]
+	editor = vim
+	quotepath = false
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
