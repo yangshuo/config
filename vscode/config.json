@@ -1,0 +1,131 @@
+{
+    // 以像素为单位控制字号。
+    "editor.fontSize": 16,
+    // 控制字体系列。
+    "editor.fontFamily": "Courier New",
+    // 按 "Tab" 时插入空格。该设置在 `editor.detectIndentation` 启用时根据文件内容进行重写。
+    "editor.insertSpaces": false,
+    // 一个制表符等于的空格数。该设置在 `editor.detectIndentation` 启用时根据文件内容进行重写。
+    "editor.tabSize": 4,
+    // 控制编辑器是否应在键入后自动设置行的格式
+    "editor.formatOnType": false,
+    // 控制编辑器是否应自动设置粘贴内容的格式。格式化程序必须可用并且能设置文档中某一范围的格式。
+    "editor.formatOnPaste": true,
+    // 控制编辑器是否应在用户键入、粘贴或移动行时自动调整缩进。语言的缩进规则必须可用。
+    "editor.autoIndent": true,
+    // 控制键入触发器字符时是否应自动显示建议
+    "editor.suggestOnTriggerCharacters": true,
+    // 控制按“Enter”键是否像按“Tab”键一样接受建议。这能帮助避免“插入新行”和“接受建议”之间的歧义。值为“smart”时表示，仅当文字改变时，按“Enter”键才能接受建议
+    "editor.acceptSuggestionOnEnter": "on",
+    // 控制是否应在遇到提交字符时接受建议。例如，在 JavaScript 中，分号(";")可以为提交字符，可接受建议并键入该字符。
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    // 控制是否将代码段与其他建议一起显示以及它们的排序方式。
+    "editor.snippetSuggestions": "top",
+    // 控制没有选择内容的复制是否复制当前行。
+    "editor.emptySelectionClipboard": true,
+    // 控制是否应根据文档中的字数计算完成。
+    "editor.wordBasedSuggestions": true,
+    // 建议小组件的字号
+    "editor.suggestFontSize": 0,
+    // 建议小组件的行高
+    "editor.suggestLineHeight": 0,
+    // 控制编辑器是否应突出显示选项的近似匹配
+    "editor.selectionHighlight": true,
+    // 控制编辑器是否应该突出显示语义符号次数
+    "editor.occurrencesHighlight": true,
+    // 控制可在概述标尺同一位置显示的效果数量
+    "editor.overviewRulerLanes": 3,
+    // 控制概述标尺周围是否要绘制边框。
+    "editor.overviewRulerBorder": true,
+    // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
+    "editor.cursorBlinking": "blink",
+    // 通过使用鼠标滚轮同时按住 Ctrl 可缩放编辑器的字体
+    "editor.mouseWheelZoom": false,
+    // 控制光标样式，接受的值为 "block"、"block-outline"、"line"、"line-thin" 、"underline" 和 "underline-thin"
+    "editor.cursorStyle": "line",
+    // 启用字体连字
+    "editor.fontLigatures": false,
+    // 控制光标是否应隐藏在概述标尺中。
+    "editor.hideCursorInOverviewRuler": false,
+    // 控制编辑器中呈现空白字符的方式，可能为“无”、“边界”和“全部”。“边界”选项不会在单词之间呈现单空格。
+    "editor.renderWhitespace": "none",
+    // 控制编辑器是否应呈现控制字符
+    "editor.renderControlCharacters": false,
+    // 控制编辑器是否应呈现缩进参考线
+    "editor.renderIndentGuides": true,
+    // 控制编辑器应如何呈现当前行突出显示，可能为“无”、“装订线”、“线”和“全部”。
+    "editor.renderLineHighlight": "line",
+    // 控制编辑器是否显示代码滤镜
+    "editor.codeLens": true,
+    // 控制编辑器是否启用代码折叠功能
+    "editor.folding": true,
+    // 控制是否自动隐藏导航线上的折叠控件。
+    "editor.showFoldingControls": "mouseover",
+    // 当选择其中一项时，将突出显示匹配的括号。
+    "editor.matchBrackets": true,
+    // 控制编辑器是否应呈现垂直字形边距。字形边距最常用于调试。
+    "editor.glyphMargin": true,
+    // 在制表位后插入和删除空格
+    "editor.useTabStops": true,
+    // 删除尾随自动插入的空格
+    "editor.trimAutoWhitespace": true,
+    // 即使在双击编辑器内容或按 Esc 键时，也要保持速览编辑器的打开状态。
+    "editor.stablePeek": false,
+    // 控制编辑器是否应该允许通过拖放移动所选项。
+    "editor.dragAndDrop": true,
+    // 控制编辑器是否应运行在对屏幕阅读器进行优化的模式。
+    "editor.accessibilitySupport": "auto",
+    // 控制编辑器是否应检测链接并使它们可被点击
+    "editor.links": true,
+    // 控制 Diff 编辑器以并排或内联形式显示差异
+    "diffEditor.renderSideBySide": true,
+    // 控制差异编辑器是否将对前导空格或尾随空格的更改显示为差异
+    "diffEditor.ignoreTrimWhitespace": true,
+    // 控制差异编辑器是否为已添加/删除的更改显示 +/- 指示符号
+    "diffEditor.renderIndicators": true,
+    // 保存时设置文件的格式。格式化程序必须可用，不能自动保存文件，并且不能关闭编辑器。
+    "editor.formatOnSave": false,
+    // 在 "editor.wordWrap" 为 "wordWrapColumn" 或 "bounded" 时控制编辑器列的换行。
+    "editor.wordWrapColumn": 120,
+    "java.debug.logLevel": "warn",
+    // External dependencies of the form groupId:artifactId:version or groupId:artifactId:packaging:version:scope
+    "java.externalDependencies": [],
+    // Specifies the folder path to the JDK 8 used to launch the Java Language Server.
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home",
+    // Specifies extra VM arguments used to launch the Java Language Server. Eg. use `-noverify -Xmx1G  -XX:+UseG1GC -XX:+UseStringDeduplication` to bypass class verification, increase the heap size to 1GB and enable String deduplication with the G1 Garbage collector
+    "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication",
+    // Specifies the severity of the message when the classpath is incomplete for a Java file
+    "java.errors.incompleteClasspath.severity": "warning",
+    // Specifies how modifications on build files update the Java classpath/configuration
+    "java.configuration.updateBuildConfiguration": "interactive",
+    // Traces the communication between VS Code and the Java language server.
+    "java.trace.server": "off",
+    // Enable/disable the references code lens.
+    "java.referencesCodeLens.enabled": true,
+    // Enable/disable the signature help.
+    "java.signatureHelp.enabled": true,
+    // Enable/disable the implementations code lens.
+    "java.implementationsCodeLens.enabled": true,
+    // Absolute path to Maven's settings.xml
+    "java.configuration.maven.userSettings": "~/.m2/settings.xml",
+    // Enable/disable default Java formatter
+    "java.format.enabled": true,
+    // Configure glob patterns for excluding folders
+    "java.import.exclusions": [
+        "**/node_modules",
+        "**/.metadata"
+    ],
+    "editor.minimap.enabled": false,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+
+    //缩进<head>和<body>
+    "html.format.indentInnerHtml":true,
+
+    "open-in-browser.default": "firefox",
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+
+    "telemetry.enableTelemetry": false
+}

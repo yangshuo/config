@@ -1,7 +1,7 @@
 alias ll='ls -ltrh'
 
 #== JAVA Tools ==
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 
 LIB_HOME="/Users/yangshuo/Library/"
@@ -81,3 +81,24 @@ export GOROOT="/Library/go"
 export PATH="${GOROOT}/bin:${PATH}"
 export GOPATH="${GOROOT}"
 
+function push_code(){
+	remote_branch=$1
+	git push origin ${remote_branch}
+	git push csdn ${remote_branch}
+}
+
+alias push_v1="push_code 1.0.0"
+
+
+#==== OpenSSL ===
+export PATH="/usr/local/opt/openssl/bin:${PATH}"
+
+#==== Go ====
+#export GOPATH="/Users/yangshuo/Library/go"
+#export PATH="${GOPATH}/bin:${PATH}"
+export GOROOT="/usr/local/Cellar/go/1.8"
+#export GOPATH="/usr/local/Cellar/go/1.8/libexec/"
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+
+#==== Proxy Settings ====
+source ~/.proxy_func.sh

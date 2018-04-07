@@ -1,7 +1,7 @@
 alias ll='ls -ltrh'
 
 #== JAVA Tools ==
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 
 LIB_HOME="/Users/yangshuo/Library/"
@@ -10,6 +10,7 @@ export PATH="${M2_HOME}/bin:${PATH}"
 
 export ANT_HOME="${LIB_HOME}/apache-ant"
 export PATH="${ANT_HOME}/bin:${PATH}"
+export ANT_OPTS="-Xmx1024m"
 
 export TOMCAT_HOME="${LIB_HOME}/apache-tomcat"
 export CATALINA_HOME="${TOMCAT_HOME}"
@@ -64,7 +65,9 @@ git config --global color.status auto
 
 
 #== Usefull alias ==
-alias cdsrc='cd ~/Documents/Code'
+export CODE_HOME="~/Documents/Code"
+alias cdsrc="cd ${CODE_HOME}"
+alias cdfinance="cd ${CODE_HOME}/finance-app"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
@@ -81,3 +84,35 @@ export GOROOT="/Library/go"
 export PATH="${GOROOT}/bin:${PATH}"
 export GOPATH="${GOROOT}"
 
+
+function push_code(){
+	remote_branch=$1
+	git push origin ${remote_branch}
+	git push csdn ${remote_branch}
+}
+
+alias push_v1="push_code 1.0.0"
+
+
+#== chrome in debug mode ===
+alias start_chrome_in_debug_mode='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
+
+source ~/.db_func
+
+#==== OpenSSL ===
+export PATH="/usr/local/opt/openssl/bin:${PATH}"
+
+
+#==== Go ====
+#export GOPATH="/Users/yangshuo/Library/go"
+#export PATH="${GOPATH}/bin:${PATH}"
+export GOROOT="/usr/local/Cellar/go/1.8"
+#export GOPATH="/usr/local/Cellar/go/1.8/libexec/"
+
+
+#== The fuck ==
+eval "$(thefuck --alias)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
