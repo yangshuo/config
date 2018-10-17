@@ -1,7 +1,7 @@
 alias ll='ls -ltrh'
 
 #== JAVA Tools ==
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 
 LIB_HOME="/Users/yangshuo/Library/"
@@ -65,6 +65,7 @@ git config --global color.status auto
 
 #== Usefull alias ==
 alias cdsrc='cd ~/Documents/Code'
+alias vi='vim'
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
