@@ -1,8 +1,30 @@
 alias ll='ls -ltrh'
+alias vi=vim
 
 #== JAVA Tools ==
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home"
+export JAVA_HOME_BASE="/Library/Java/JavaVirtualMachines"
+export JAVA7_HOME="${JAVA_HOME_BASE}/jdk1.7.0_80.jdk/Contents/Home"
+export JAVA8_HOME="${JAVA_HOME_BASE}/jdk1.8.0_191.jdk/Contents/Home"
+export JAVA11_HOME="${JAVA_HOME_BASE}/jdk-11.jdk/Contents/Home"
+
+export JAVA_HOME="${JAVA8_HOME}"
 export PATH="${JAVA_HOME}/bin:${PATH}"
+
+function use_java7(){
+	export JAVA_HOME="${JAVA7_HOME}"
+	export PATH="${JAVA_HOME}/bin:${PATH}"
+}
+
+function use_java8(){
+	export JAVA_HOME="${JAVA8_HOME}"
+	export PATH="${JAVA_HOME}/bin:${PATH}"
+}
+
+function use_java11(){
+	export JAVA_HOME="${JAVA11_HOME}"
+	export PATH="${JAVA_HOME}/bin:${PATH}"
+}
+
 
 LIB_HOME="/Users/yangshuo/Library/"
 export M2_HOME="${LIB_HOME}/apache-maven"
@@ -15,6 +37,9 @@ export TOMCAT_HOME="${LIB_HOME}/apache-tomcat"
 export CATALINA_HOME="${TOMCAT_HOME}"
 export PATH="${TOMCAT_HOME}/bin:${PATH}"
 export CATALINA_OPTS="${CATALINA_OPTS} -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+
+export GRADLE_HOME="${LIB_HOME}/gradle";
+export PATH="${GRADLE_HOME}/bin:${PATH}"
 
 #== Andoird ==
 export ANDROID_SDK_HOME="/Users/yangshuo/Library/android-sdk-macosx/"
@@ -103,3 +128,7 @@ if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
 #==== Proxy Settings ====
 source ~/.proxy_func.sh
+
+#=== NodeJS Settings ====
+source ~/.nodejs_config.sh
+
