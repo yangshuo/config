@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "3db81ddb-ca12-4093-8afc-4ad817e30571",
+		"name": "健步121",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "更新121步数",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "pbuJianBuZou/4.1.6 (iPhone; iOS 12.2; Scale/2.00)",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "info",
+							"value": "{\"uid\":\"417020\",\"miles\":\"10070\",\"actTime\":\"10000\",\"steps\":\"10070\",\"deviceType\":\"iOS\",\"calorie\":\"24.10\",\"version\":\"4.1.6\",\"token\":\"ee29417ece1c157e14f8e520ead796da\",\"type\":\"1\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://120.131.4.28:8080/jianbu/app/dailyStepRecord/updateStepData.do",
+					"protocol": "http",
+					"host": [
+						"120",
+						"131",
+						"4",
+						"28"
+					],
+					"port": "8080",
+					"path": [
+						"jianbu",
+						"app",
+						"dailyStepRecord",
+						"updateStepData.do"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "121分享",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "pbuJianBuZou/4.1.6 (iPhone; iOS 12.2; Scale/2.00)",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "info",
+							"value": "{\"deviceType\":\"iOS\",\"uid\":\"417020\",\"token\":\"ee29417ece1c157e14f8e520ead796da\",\"version\":\"4.1.6\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://120.131.4.28:8080/jianbu/app/user/share.do",
+					"protocol": "http",
+					"host": [
+						"120",
+						"131",
+						"4",
+						"28"
+					],
+					"port": "8080",
+					"path": [
+						"jianbu",
+						"app",
+						"user",
+						"share.do"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
